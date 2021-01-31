@@ -1,0 +1,348 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>custom_step.highlighter &mdash; Custom Step 2020.12.4+2.g87312fc documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Custom Step
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.12.4+2.g87312fc
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user/index.html">User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../developer/index.html">Developer Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../history.html">History</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://molssi-seamm.github.io">Main SEAMM documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Custom Step</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>custom_step.highlighter</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for custom_step.highlighter</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+
+<div class="viewcode-block" id="Highlighter"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter">[docs]</a><span class="k">class</span> <span class="nc">Highlighter</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text_widget</span><span class="p">,</span> <span class="n">syntax_file</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span> <span class="o">=</span> <span class="n">text_widget</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syntax_file</span> <span class="o">=</span> <span class="n">syntax_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numbers_colour</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strings_colour</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">disallowed_previous_chars</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">parse_syntax_file</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s1">&#39;&lt;KeyRelease&gt;&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_key_release</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Highlighter.on_key_release"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.on_key_release">[docs]</a>    <span class="k">def</span> <span class="nf">on_key_release</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Highlighter.parse_syntax_file"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.parse_syntax_file">[docs]</a>    <span class="k">def</span> <span class="nf">parse_syntax_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">syntax_file</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">categories</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;categories&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numbers_colour</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;numbers&#39;</span><span class="p">][</span><span class="s1">&#39;colour&#39;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strings_colour</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;strings&#39;</span><span class="p">][</span><span class="s1">&#39;colour&#39;</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_tags</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Highlighter.configure_tags"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.configure_tags">[docs]</a>    <span class="k">def</span> <span class="nf">configure_tags</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">colour</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">][</span><span class="s1">&#39;colour&#39;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_configure</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="n">colour</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_configure</span><span class="p">(</span>
+            <span class="s2">&quot;number&quot;</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">numbers_colour</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_configure</span><span class="p">(</span>
+            <span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">strings_colour</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Highlighter.highlight"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.highlight">[docs]</a>    <span class="k">def</span> <span class="nf">highlight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">IntVar</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">:</span>
+            <span class="n">matches</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">[</span><span class="n">category</span><span class="p">][</span><span class="s1">&#39;matches&#39;</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">keyword</span> <span class="ow">in</span> <span class="n">matches</span><span class="p">:</span>
+                <span class="n">start</span> <span class="o">=</span> <span class="mf">1.0</span>
+                <span class="n">keyword</span> <span class="o">=</span> <span class="n">keyword</span> <span class="o">+</span> <span class="s2">&quot;[^A-Za-z_-]&quot;</span>
+                <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                    <span class="n">keyword</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">length</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span>
+                <span class="p">)</span>
+                <span class="k">while</span> <span class="n">idx</span><span class="p">:</span>
+                    <span class="n">char_match_found</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span>
+                    <span class="n">line_match_found</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+                    <span class="k">if</span> <span class="n">char_match_found</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">previous_char_index</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span>
+                            <span class="n">line_match_found</span>
+                        <span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">char_match_found</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="n">previous_char</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                            <span class="n">previous_char_index</span><span class="p">,</span> <span class="n">previous_char_index</span> <span class="o">+</span> <span class="s2">&quot;+1c&quot;</span>
+                        <span class="p">)</span>
+
+                        <span class="k">if</span> <span class="n">previous_char</span><span class="o">.</span><span class="n">isalnum</span><span class="p">(</span>
+                        <span class="p">)</span> <span class="ow">or</span> <span class="n">previous_char</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">disallowed_previous_chars</span><span class="p">:</span>
+                            <span class="c1"># end = f&quot;{idx}+{length.get() - 1}c&quot;</span>
+                            <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">c&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                            <span class="n">start</span> <span class="o">=</span> <span class="n">end</span>
+                            <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                                <span class="n">keyword</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span>
+                            <span class="p">)</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="c1"># end = f&quot;{idx}+{length.get() - 1}c&quot;</span>
+                            <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">c&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_add</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+
+                            <span class="n">start</span> <span class="o">=</span> <span class="n">end</span>
+                            <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                                <span class="n">keyword</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span>
+                            <span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># end = f&quot;{idx}+{length.get() - 1}c&quot;</span>
+                        <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">c&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">get</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_add</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+
+                        <span class="n">start</span> <span class="o">=</span> <span class="n">end</span>
+                        <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                            <span class="n">keyword</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span>
+                        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight_regex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;(\d)+[.]?(\d)*&quot;</span><span class="p">,</span> <span class="s2">&quot;number&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight_regex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[\&#39;][^\&#39;]*[\&#39;]&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight_regex</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[</span><span class="se">\&quot;</span><span class="s2">][^\&#39;]*[</span><span class="se">\&quot;</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Highlighter.highlight_regex"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.highlight_regex">[docs]</a>    <span class="k">def</span> <span class="nf">highlight_regex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regex</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">IntVar</span><span class="p">()</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+            <span class="n">regex</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">length</span>
+        <span class="p">)</span>
+        <span class="k">while</span> <span class="n">idx</span><span class="p">:</span>
+            <span class="c1"># end = f&quot;{idx}+{length.get()}c&quot;</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">+</span><span class="si">{}</span><span class="s2">c&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">length</span><span class="o">.</span><span class="n">get</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_add</span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+
+            <span class="n">start</span> <span class="o">=</span> <span class="n">end</span>
+            <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+                <span class="n">regex</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">stopindex</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">,</span> <span class="n">regexp</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="n">length</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Highlighter.force_highlight"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.force_highlight">[docs]</a>    <span class="k">def</span> <span class="nf">force_highlight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlight</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Highlighter.clear_highlight"><a class="viewcode-back" href="../../developer/custom_step.html#custom_step.highlighter.Highlighter.clear_highlight">[docs]</a>    <span class="k">def</span> <span class="nf">clear_highlight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">categories</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_widget</span><span class="o">.</span><span class="n">tag_remove</span><span class="p">(</span><span class="n">category</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">)</span></div></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="n">Highlighter</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="s1">&#39;languages/python.yaml&#39;</span><span class="p">)</span>
+    <span class="n">w</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+
+<p>
+<div class="row">
+  <div class="column_left">
+    <a href="https://molssi.org/" target="_blank" title="Go to MolSSI in a new tab">
+      <img src="/_images/MolSSI.jpg" alt="The MolSSI" style="border:0;">
+    </a>
+  </div>
+  <div class="column">
+    &copy; Copyright 2020, the Molecular Sciences Software Institute,
+    which receives funding from the National Science Foundation under award ACI-1547580
+  </div>
+  <div class="column_right">
+    <a href="https://nsf.gov/" target="_blank" title="Go to the NSF in a new tab">
+      <img src="/_images/NSF_4-Color_bitmap_Logo.png" alt="The NSF" style="border:0;">
+    </a>
+  </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

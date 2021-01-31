@@ -1,0 +1,824 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>custom_step package &mdash; Custom Step 2020.12.4+2.g87312fc documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="custom_step" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Custom Step
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.12.4+2.g87312fc
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Developer Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html">custom_step</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">custom_step package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history.html">History</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://molssi-seamm.github.io">Main SEAMM documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Custom Step</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Developer Documentation</a> &raquo;</li>
+        
+          <li><a href="modules.html">custom_step</a> &raquo;</li>
+        
+      <li>custom_step package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/developer/custom_step.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="custom-step-package">
+<h1>custom_step package<a class="headerlink" href="#custom-step-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-custom_step.colourchooser">
+<span id="custom-step-colourchooser-module"></span><h2>custom_step.colourchooser module<a class="headerlink" href="#module-custom_step.colourchooser" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.colourchooser.ColourChooser">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.colourchooser.</code><code class="sig-name descname">ColourChooser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">master</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tkinter.Toplevel</span></code></p>
+<dl class="py method">
+<dt id="custom_step.colourchooser.ColourChooser.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.colourchooser.ColourChooser.set_colour">
+<code class="sig-name descname">set_colour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sv</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser.set_colour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser.set_colour" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.custom">
+<span id="custom-step-custom-module"></span><h2>custom_step.custom module<a class="headerlink" href="#module-custom_step.custom" title="Permalink to this headline">¶</a></h2>
+<p>Non-graphical part of the Custom step in a SEAMM flowchart</p>
+<dl class="py class">
+<dt id="custom_step.custom.Custom">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.custom.</code><code class="sig-name descname">Custom</code><span class="sig-paren">(</span><em class="sig-param">flowchart=None</em>, <em class="sig-param">title='Custom Python'</em>, <em class="sig-param">extension=None</em>, <em class="sig-param">logger=&lt;Logger custom_step.custom (WARNING)&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom.Custom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">seamm.node.Node</span></code></p>
+<dl class="py method">
+<dt id="custom_step.custom.Custom.description_text">
+<code class="sig-name descname">description_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom.description_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom.Custom.description_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the text description of what this step will do.
+The dictionary of control values is passed in as P so that
+the code can test values, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>P</strong> (<em>dict</em>) – An optional dictionary of the current values of the control
+parameters.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A description of the current step.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.custom.Custom.git_revision">
+<em class="property">property </em><code class="sig-name descname">git_revision</code><a class="headerlink" href="#custom_step.custom.Custom.git_revision" title="Permalink to this definition">¶</a></dt>
+<dd><p>The git version of this module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.custom.Custom.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom.Custom.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a Custom step.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.custom.Custom.version">
+<em class="property">property </em><code class="sig-name descname">version</code><a class="headerlink" href="#custom_step.custom.Custom.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The semantic version of this module.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="custom_step.custom.cd">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.custom.</code><code class="sig-name descname">cd</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">newPath</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#cd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom.cd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Context manager for changing the current working directory</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.custom_parameters">
+<span id="custom-step-custom-parameters-module"></span><h2>custom_step.custom_parameters module<a class="headerlink" href="#module-custom_step.custom_parameters" title="Permalink to this headline">¶</a></h2>
+<p>Control parameters for the Customl step in a SEAMM flowchart</p>
+<dl class="py class">
+<dt id="custom_step.custom_parameters.CustomParameters">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.custom_parameters.</code><code class="sig-name descname">CustomParameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">defaults</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">data</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_parameters.html#CustomParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom_parameters.CustomParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">seamm.parameters.Parameters</span></code></p>
+<p>The control parameters for a Custom step.</p>
+<p>The developer will add a dictionary of Parameters to this class.
+The keys are parameters for the current plugin, which themselves
+might be dictionaries.</p>
+<p>You need to replace the ‘time’ example below with one or more
+definitions of the control parameters for your plugin and application.</p>
+<dl class="py attribute">
+<dt id="custom_step.custom_parameters.CustomParameters.parameters">
+<code class="sig-name descname">parameters</code><a class="headerlink" href="#custom_step.custom_parameters.CustomParameters.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>‘format_string’, description’, help_text’}</p>
+</div></blockquote>
+<p>A dictionary containing the parameters for the current step.
+Each key of the dictionary is a dictionary that contains the
+the following keys: kind, default, default_units, enumeration,
+format_string, description and help text.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>{‘kind’, ‘default’, ‘default_units’, ‘enumeration’,</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['kind']</code></dt>
+<dd><p>Specifies the kind of a variable. While the ‘kind’ of a variable might
+be a numeric value, it may still have enumerated custom values
+meaningful to the user. For instance, if the parameter is
+a convergence criterion for an optimizer, custom values like ‘normal’,
+‘precise’, etc, might be adequate. In addition, any
+parameter can be set to a variable of expression, indicated by having
+‘$’ as the first character in the field. For example, $OPTIMIZER_CONV.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>custom</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['default']</code></dt>
+<dd><p>‘enum’ The default value of the parameter, used to reset it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>‘integer’ or ‘float’ or ‘string’ or ‘boolean’ or</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['default_units']</code></dt>
+<dd><p>The default units, used for resetting the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['enumeration']</code></dt>
+<dd><p>A tuple of enumerated values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['format_string']</code></dt>
+<dd><p>A format string for ‘pretty’ output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['description']</code></dt>
+<dd><p>A short string used as a prompt in the GUI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">parameters['help_text']</code></dt>
+<dd><p>A longer string to display as help for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Custom</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">TkCustom</span></code>, <a class="reference internal" href="#custom_step.custom_parameters.CustomParameters" title="custom_step.custom_parameters.CustomParameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomParameters</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomStep</span></code></p>
+</div>
+<p class="rubric">Examples</p>
+<dl>
+<dt>parameters = {</dt><dd><dl class="simple">
+<dt>“time”: {</dt><dd><p>“default”: 100.0,
+“kind”: “float”,
+“default_units”: “ps”,
+“enumeration”: tuple(),
+“format_string”: “.1f”,
+“description”: “Simulation time:”,
+“help_text”: (“The time to simulate in the dynamics run.”)</p>
+</dd>
+</dl>
+<p>},</p>
+</dd>
+</dl>
+<p>}</p>
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">parameters</code><em class="property"> = {'script': {'default': '', 'default_units': None, 'description': 'Script:', 'enumeration': (), 'format_string': '', 'help_text': 'The Python script', 'kind': 'string'}}</em><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.custom_step">
+<span id="custom-step-custom-step-module"></span><h2>custom_step.custom_step module<a class="headerlink" href="#module-custom_step.custom_step" title="Permalink to this headline">¶</a></h2>
+<p>Helper class needed for the stevedore integration. Needs to provide
+a description() method that returns a dict containing a description of
+this node, and a factory() method for creating the graphical and non-graphical
+nodes.</p>
+<dl class="py class">
+<dt id="custom_step.custom_step.CustomStep">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.custom_step.</code><code class="sig-name descname">CustomStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flowchart</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gui</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="custom_step.custom_step.CustomStep.create_node">
+<code class="sig-name descname">create_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flowchart</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.create_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.create_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the new node object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.custom_step.CustomStep.create_tk_node">
+<code class="sig-name descname">create_tk_node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">canvas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.create_tk_node"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.create_tk_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the graphical Tk node object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.custom_step.CustomStep.description">
+<code class="sig-name descname">description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.description"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a description of what this extension does</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.custom_step.CustomStep.my_description">
+<code class="sig-name descname">my_description</code><em class="property"> = {'description': 'An interface for Custom Python steps', 'group': 'Custom', 'name': 'Python'}</em><a class="headerlink" href="#custom_step.custom_step.CustomStep.my_description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.findwindow">
+<span id="custom-step-findwindow-module"></span><h2>custom_step.findwindow module<a class="headerlink" href="#module-custom_step.findwindow" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.findwindow.FindWindow">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.findwindow.</code><code class="sig-name descname">FindWindow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">master</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tkinter.Toplevel</span></code></p>
+<dl class="py method">
+<dt id="custom_step.findwindow.FindWindow.on_cancel">
+<code class="sig-name descname">on_cancel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_cancel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.findwindow.FindWindow.on_find">
+<code class="sig-name descname">on_find</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_find"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.findwindow.FindWindow.on_replace">
+<code class="sig-name descname">on_replace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_replace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.fontchooser">
+<span id="custom-step-fontchooser-module"></span><h2>custom_step.fontchooser module<a class="headerlink" href="#module-custom_step.fontchooser" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.fontchooser.FontChooser">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.fontchooser.</code><code class="sig-name descname">FontChooser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">master</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/fontchooser.html#FontChooser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.fontchooser.FontChooser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tkinter.Toplevel</span></code></p>
+<dl class="py method">
+<dt id="custom_step.fontchooser.FontChooser.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/fontchooser.html#FontChooser.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.fontchooser.FontChooser.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.highlighter">
+<span id="custom-step-highlighter-module"></span><h2>custom_step.highlighter module<a class="headerlink" href="#module-custom_step.highlighter" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.highlighter.Highlighter">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.highlighter.</code><code class="sig-name descname">Highlighter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text_widget</span></em>, <em class="sig-param"><span class="n">syntax_file</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.clear_highlight">
+<code class="sig-name descname">clear_highlight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.clear_highlight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.clear_highlight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.configure_tags">
+<code class="sig-name descname">configure_tags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.configure_tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.configure_tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.force_highlight">
+<code class="sig-name descname">force_highlight</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.force_highlight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.force_highlight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.highlight">
+<code class="sig-name descname">highlight</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.highlight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.highlight" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.highlight_regex">
+<code class="sig-name descname">highlight_regex</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regex</span></em>, <em class="sig-param"><span class="n">tag</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.highlight_regex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.highlight_regex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.on_key_release">
+<code class="sig-name descname">on_key_release</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.on_key_release"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.on_key_release" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.highlighter.Highlighter.parse_syntax_file">
+<code class="sig-name descname">parse_syntax_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.parse_syntax_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.parse_syntax_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.linenumbers">
+<span id="custom-step-linenumbers-module"></span><h2>custom_step.linenumbers module<a class="headerlink" href="#module-custom_step.linenumbers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.linenumbers.LineNumbers">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.linenumbers.</code><code class="sig-name descname">LineNumbers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">master</span></em>, <em class="sig-param"><span class="n">text_widget</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tkinter.Text</span></code></p>
+<dl class="py method">
+<dt id="custom_step.linenumbers.LineNumbers.force_update">
+<code class="sig-name descname">force_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers.force_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers.force_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.linenumbers.LineNumbers.on_key_press">
+<code class="sig-name descname">on_key_press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers.on_key_press"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers.on_key_press" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step.textarea">
+<span id="custom-step-textarea-module"></span><h2>custom_step.textarea module<a class="headerlink" href="#module-custom_step.textarea" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="custom_step.textarea.TextArea">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.textarea.</code><code class="sig-name descname">TextArea</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">master</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">tkinter.Text</span></code></p>
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.bind_events">
+<code class="sig-name descname">bind_events</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.bind_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.bind_events" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.cancel_find">
+<code class="sig-name descname">cancel_find</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.cancel_find"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.cancel_find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.copy">
+<code class="sig-name descname">copy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.cut">
+<code class="sig-name descname">cut</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.cut"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.cut" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.display_file_contents">
+<code class="sig-name descname">display_file_contents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filepath</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.display_file_contents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.display_file_contents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.find">
+<code class="sig-name descname">find</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text_to_find</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.find"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.find" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.paste">
+<code class="sig-name descname">paste</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.paste"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.paste" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.redo">
+<code class="sig-name descname">redo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.redo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.redo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.replace_text">
+<code class="sig-name descname">replace_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target</span></em>, <em class="sig-param"><span class="n">replacement</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.replace_text"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.replace_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.select_all">
+<code class="sig-name descname">select_all</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.select_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.select_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.textarea.TextArea.undo">
+<code class="sig-name descname">undo</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.undo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.textarea.TextArea.undo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="custom-step-texteditor-module">
+<h2>custom_step.texteditor module<a class="headerlink" href="#custom-step-texteditor-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-custom_step.tk_custom">
+<span id="custom-step-tk-custom-module"></span><h2>custom_step.tk_custom module<a class="headerlink" href="#module-custom_step.tk_custom" title="Permalink to this headline">¶</a></h2>
+<p>The graphical part of a Custom step</p>
+<dl class="py class">
+<dt id="custom_step.tk_custom.TkCustom">
+<em class="property">class </em><code class="sig-prename descclassname">custom_step.tk_custom.</code><code class="sig-name descname">TkCustom</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tk_flowchart</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">canvas</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">x</span><span class="o">=</span><span class="default_value">120</span></em>, <em class="sig-param"><span class="n">y</span><span class="o">=</span><span class="default_value">20</span></em>, <em class="sig-param"><span class="n">w</span><span class="o">=</span><span class="default_value">200</span></em>, <em class="sig-param"><span class="n">h</span><span class="o">=</span><span class="default_value">50</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">seamm.tk_node.TkNode</span></code></p>
+<p>The graphical part of a Custom step in a flowchart.</p>
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.tk_flowchart">
+<code class="sig-name descname">tk_flowchart</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.tk_flowchart" title="Permalink to this definition">¶</a></dt>
+<dd><p>The flowchart that we belong to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>TkFlowchart = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.node">
+<code class="sig-name descname">node</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>The corresponding node of the non-graphical flowchart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Node = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.namespace">
+<code class="sig-name descname">namespace</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace of the current step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.sub_tk_flowchart">
+<code class="sig-name descname">sub_tk_flowchart</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.sub_tk_flowchart" title="Permalink to this definition">¶</a></dt>
+<dd><p>A graphical Flowchart representing a subflowchart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>TkFlowchart</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.canvas">
+<code class="sig-name descname">canvas</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.canvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Tk Canvas to draw on</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>tkCanvas = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.dialog">
+<code class="sig-name descname">dialog</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Pmw dialog object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dialog</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.x">
+<code class="sig-name descname">x</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>The x-coordinate of the center of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.y">
+<code class="sig-name descname">y</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>The y-coordinate of the center of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.w">
+<code class="sig-name descname">w</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.w" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width in pixels of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int = 200</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="custom_step.tk_custom.TkCustom.h">
+<code class="sig-name descname">h</code><a class="headerlink" href="#custom_step.tk_custom.TkCustom.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height in pixels of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int = 50</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt>
+<code class="sig-name descname">self[widget]</code></dt>
+<dd><p>A dictionary of tk widgets built using the information
+contained in Set Cell_parameters.py</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Custom</span></code>, <a class="reference internal" href="#custom_step.tk_custom.TkCustom" title="custom_step.tk_custom.TkCustom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TkCustom</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomParameters</span></code></p>
+</div>
+<dl class="py method">
+<dt id="custom_step.tk_custom.TkCustom.create_dialog">
+<code class="sig-name descname">create_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.create_dialog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.create_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the dialog!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.tk_custom.TkCustom.handle_dialog">
+<code class="sig-name descname">handle_dialog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">result</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.handle_dialog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.handle_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do the right thing when the dialog is closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="custom_step.tk_custom.TkCustom.right_click">
+<code class="sig-name descname">right_click</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.right_click"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.right_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Probably need to add our dialog…</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-custom_step">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-custom_step" title="Permalink to this headline">¶</a></h2>
+<p>custom_step
+A step in a SEAMM flowchart for custom Python</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="contributing.html" class="btn btn-neutral float-right" title="Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="custom_step" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div>
+
+<p>
+<div class="row">
+  <div class="column_left">
+    <a href="https://molssi.org/" target="_blank" title="Go to MolSSI in a new tab">
+      <img src="/_images/MolSSI.jpg" alt="The MolSSI" style="border:0;">
+    </a>
+  </div>
+  <div class="column">
+    &copy; Copyright 2020, the Molecular Sciences Software Institute,
+    which receives funding from the National Science Foundation under award ACI-1547580
+  </div>
+  <div class="column_right">
+    <a href="https://nsf.gov/" target="_blank" title="Go to the NSF in a new tab">
+      <img src="/_images/NSF_4-Color_bitmap_Logo.png" alt="The NSF" style="border:0;">
+    </a>
+  </div>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
