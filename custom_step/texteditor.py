@@ -8,12 +8,12 @@ import yaml
 
 from tkinter import filedialog
 
-from textarea import TextArea
-from linenumbers import LineNumbers
-from highlighter import Highlighter
-from findwindow import FindWindow
-from colourchooser import ColourChooser
-from fontchooser import FontChooser
+from .textarea import TextArea
+from .linenumbers import LineNumbers
+from .highlighter import Highlighter
+from .findwindow import FindWindow
+from .colourchooser import ColourChooser
+from .fontchooser import FontChooser
 
 
 class MainWindow(tk.Tk):
