@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom_step.texteditor &#8212; Custom Step 2026.3.15 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c224919a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
+<!-- End Google Tag Manager -->
+
+    <script src="../../_static/documentation_options.js?v=84ae3402"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/custom_step/texteditor';</script>
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2026.3.15" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/SEAMM logo.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/SEAMM Inverted 288x181.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">CUSTOM Step</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../developer_guide/index.html">
+    Developer Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API Documentation
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../authors.html">
+    Credits
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../history.html">
+    History
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://molssi-seamm.github.io">
+    SEAMM Documentation
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://molssi.org">
+    MolSSI
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/molssi-seamm/custom_step" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/MolSSI_NSF" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../developer_guide/index.html">
+    Developer Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api/index.html">
+    API Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../authors.html">
+    Credits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../history.html">
+    History
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://molssi-seamm.github.io">
+    SEAMM Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://molssi.org">
+    MolSSI
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/molssi-seamm/custom_step" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/MolSSI_NSF" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">custom_step.texteditor</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for custom_step.texteditor</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter.ttk</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ttk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tkinter.messagebox</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">msg</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">tkinter</span><span class="w"> </span><span class="kn">import</span> <span class="n">filedialog</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">.textarea</span><span class="w"> </span><span class="kn">import</span> <span class="n">TextArea</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.linenumbers</span><span class="w"> </span><span class="kn">import</span> <span class="n">LineNumbers</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.highlighter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Highlighter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.findwindow</span><span class="w"> </span><span class="kn">import</span> <span class="n">FindWindow</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.colourchooser</span><span class="w"> </span><span class="kn">import</span> <span class="n">ColourChooser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.fontchooser</span><span class="w"> </span><span class="kn">import</span> <span class="n">FontChooser</span>
+
+
+<div class="viewcode-block" id="MainWindow">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Python Text Editor v3&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s2">&quot;800x600&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="s2">&quot;lightgrey&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_foreground</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_background</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()),</span> <span class="s2">&quot;.tkedit&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_scheme_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">,</span> <span class="s2">&quot;schemes/default.yaml&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">python_language_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">,</span> <span class="s2">&quot;languages/python.yaml&quot;</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_scheme_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">,</span> <span class="s2">&quot;schemes/font.yaml&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_config_directory_if_needed</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_scheme_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_scheme_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_ttk_elements</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span> <span class="o">=</span> <span class="mi">15</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_family</span> <span class="o">=</span> <span class="s2">&quot;Ubuntu Mono&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_font_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_scheme_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span> <span class="o">=</span> <span class="n">TextArea</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">bg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_background</span><span class="p">,</span>
+            <span class="n">fg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_foreground</span><span class="p">,</span>
+            <span class="n">undo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_family</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollbar</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Scrollbar</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s2">&quot;vertical&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scroll_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">yscrollcommand</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scrollbar</span><span class="o">.</span><span class="n">set</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span> <span class="o">=</span> <span class="n">LineNumbers</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span> <span class="o">=</span> <span class="n">Highlighter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">python_language_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">menu</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">all_menus</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="p">]</span>
+
+        <span class="n">sub_menu_items</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="s2">&quot;edit&quot;</span><span class="p">,</span> <span class="s2">&quot;tools&quot;</span><span class="p">,</span> <span class="s2">&quot;help&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">generate_sub_menus</span><span class="p">(</span><span class="n">sub_menu_items</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">menu</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">,</span> <span class="n">tearoff</span><span class="o">=</span><span class="mi">0</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Cut&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edit_cut</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Copy&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edit_copy</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Paste&quot;</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edit_paste</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">all_menus</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">scrollbar</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">RIGHT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">Y</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">LEFT</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">tk</span><span class="o">.</span><span class="n">BOTH</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind_events</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_file</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<div class="viewcode-block" id="MainWindow.bind_events">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.bind_events">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bind_events</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;MouseWheel&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scroll_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-4&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scroll_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-5&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">scroll_text</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-3&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_right_click_menu</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-f&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_find_window</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-n&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_new</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-o&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_open</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-s&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_save</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-h&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">help_about</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-m&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tools_change_syntax_highlighting</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-g&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tools_change_colour_scheme</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Control-l&gt;&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tools_change_font</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;MouseWheel&gt;&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="s2">&quot;break&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-4&gt;&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="s2">&quot;break&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="s2">&quot;&lt;Button-5&gt;&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="s2">&quot;break&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.scroll_text">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.scroll_text">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scroll_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">yview_moveto</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">yview_moveto</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">event</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">delta</span><span class="p">:</span>
+                <span class="n">move</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">delta</span> <span class="o">/</span> <span class="mi">120</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">num</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+                    <span class="n">move</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">move</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">yview_scroll</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">move</span><span class="p">),</span> <span class="s2">&quot;units&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">yview_scroll</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">move</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;units&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.show_find_window">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.show_find_window">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_find_window</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">FindWindow</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.show_right_click_menu">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.show_right_click_menu">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_right_click_menu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">winfo_x</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">winfo_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">winfo_y</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">winfo_y</span><span class="p">()</span> <span class="o">+</span> <span class="n">event</span><span class="o">.</span><span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">right_click_menu</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.generate_sub_menus">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.generate_sub_menus">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_sub_menus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sub_menu_items</span><span class="p">):</span>
+        <span class="n">window_methods</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">method_name</span>
+            <span class="k">for</span> <span class="n">method_name</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method_name</span><span class="p">))</span>
+        <span class="p">]</span>
+        <span class="n">tkinter_methods</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">method_name</span>
+            <span class="k">for</span> <span class="n">method_name</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">,</span> <span class="n">method_name</span><span class="p">))</span>
+        <span class="p">]</span>
+
+        <span class="n">my_methods</span> <span class="o">=</span> <span class="p">[</span><span class="n">method</span> <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="n">window_methods</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">tkinter_methods</span><span class="p">)]</span>
+        <span class="n">my_methods</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">my_methods</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sub_menu_items</span><span class="p">:</span>
+            <span class="n">sub_menu</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Menu</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="p">,</span> <span class="n">tearoff</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span>
+            <span class="p">)</span>
+            <span class="n">matching_methods</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">method</span> <span class="ow">in</span> <span class="n">my_methods</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">method</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+                    <span class="n">matching_methods</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">matching_methods</span><span class="p">:</span>
+                <span class="n">actual_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">match</span><span class="p">)</span>
+                <span class="n">method_shortcut</span> <span class="o">=</span> <span class="n">actual_method</span><span class="o">.</span><span class="vm">__doc__</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">friendly_name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:])</span>
+                <span class="n">sub_menu</span><span class="o">.</span><span class="n">add_command</span><span class="p">(</span>
+                    <span class="n">label</span><span class="o">=</span><span class="n">friendly_name</span><span class="o">.</span><span class="n">title</span><span class="p">(),</span>
+                    <span class="n">command</span><span class="o">=</span><span class="n">actual_method</span><span class="p">,</span>
+                    <span class="n">accelerator</span><span class="o">=</span><span class="n">method_shortcut</span><span class="p">,</span>
+                <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="o">.</span><span class="n">add_cascade</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">item</span><span class="o">.</span><span class="n">title</span><span class="p">(),</span> <span class="n">menu</span><span class="o">=</span><span class="n">sub_menu</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">all_menus</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sub_menu</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.show_about_page">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.show_about_page">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">show_about_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">msg</span><span class="o">.</span><span class="n">showinfo</span><span class="p">(</span>
+            <span class="s2">&quot;About&quot;</span><span class="p">,</span> <span class="s2">&quot;My text editor, version 2, written in Python3.6 using tkinter!&quot;</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.load_syntax_highlighting_file">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.load_syntax_highlighting_file">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_syntax_highlighting_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">syntax_file</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askopenfilename</span><span class="p">(</span>
+            <span class="n">filetypes</span><span class="o">=</span><span class="p">[(</span><span class="s2">&quot;YAML file&quot;</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;*.yaml&quot;</span><span class="p">,</span> <span class="s2">&quot;*.yml&quot;</span><span class="p">))]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">syntax_file</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span><span class="o">.</span><span class="n">clear_highlight</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span> <span class="o">=</span> <span class="n">Highlighter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="p">,</span> <span class="n">syntax_file</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span><span class="o">.</span><span class="n">force_highlight</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.load_scheme_file">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.load_scheme_file">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_scheme_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scheme</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;foreground&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_foreground</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;text_foreground&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_background</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;text_background&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.load_font_file">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.load_font_file">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">load_font_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+            <span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_family</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;family&quot;</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span> <span class="o">=</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;size&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.change_colour_scheme">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.change_colour_scheme">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">change_colour_scheme</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">ColourChooser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.apply_colour_scheme">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.apply_colour_scheme">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_colour_scheme</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">text_foreground</span><span class="p">,</span> <span class="n">text_background</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">fg</span><span class="o">=</span><span class="n">text_foreground</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="n">text_background</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="n">background</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">foreground</span> <span class="o">=</span> <span class="n">foreground</span>
+        <span class="k">for</span> <span class="n">menu</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_menus</span><span class="p">:</span>
+            <span class="n">menu</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">configure_ttk_elements</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.configure_ttk_elements">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.configure_ttk_elements">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">configure_ttk_elements</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">style</span> <span class="o">=</span> <span class="n">ttk</span><span class="o">.</span><span class="n">Style</span><span class="p">()</span>
+        <span class="n">style</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span>
+            <span class="s2">&quot;editor.TLabel&quot;</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span>
+        <span class="p">)</span>
+        <span class="n">style</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span>
+            <span class="s2">&quot;editor.TButton&quot;</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">foreground</span><span class="p">,</span> <span class="n">background</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.change_font">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.change_font">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">change_font</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">FontChooser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.update_font">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.update_font">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_font</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_font_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_scheme_path</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_family</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">font_size</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.create_config_directory_if_needed">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.create_config_directory_if_needed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_config_directory_if_needed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">)</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">,</span> <span class="s2">&quot;schemes&quot;</span><span class="p">))</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config_dir</span><span class="p">,</span> <span class="s2">&quot;languages&quot;</span><span class="p">))</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_default_scheme_if_needed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_font_scheme_if_needed</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_python_language_if_needed</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.create_default_scheme_if_needed">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.create_default_scheme_if_needed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_default_scheme_if_needed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_scheme_path</span><span class="p">):</span>
+            <span class="c1"># yaml_file_contents = f&quot;background: &#39;lightgrey&#39;\n&quot; \</span>
+            <span class="c1">#                  + f&quot;foreground: &#39;black&#39;\n&quot; \</span>
+            <span class="c1">#                  + f&quot;text_background: &#39;white&#39;\n&quot; \</span>
+            <span class="c1">#                  + f&quot;text_foreground: &#39;black&#39;\n&quot;</span>
+            <span class="n">yaml_file_contents</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;background: &#39;lightgrey&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;foreground: &#39;black&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;text_background: &#39;white&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="o">+</span> <span class="s2">&quot;text_foreground: &#39;black&#39;</span><span class="se">\n</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_scheme_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yaml_file</span><span class="p">:</span>
+                <span class="n">yaml_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_file_contents</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.create_font_scheme_if_needed">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.create_font_scheme_if_needed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_font_scheme_if_needed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_scheme_path</span><span class="p">):</span>
+            <span class="c1"># yaml_file_contents = f&quot;family: Ubuntu Mono\n&quot; \</span>
+            <span class="c1">#                    + f&quot;size: 14&quot;</span>
+            <span class="n">yaml_file_contents</span> <span class="o">=</span> <span class="s2">&quot;family: Ubuntu Mono</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;size: 14&quot;</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">font_scheme_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yaml_file</span><span class="p">:</span>
+                <span class="n">yaml_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_file_contents</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.create_python_language_if_needed">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.create_python_language_if_needed">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_python_language_if_needed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">python_language_path</span><span class="p">):</span>
+            <span class="n">yaml_file_contents</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">categories:</span>
+<span class="s2">  keywords:</span>
+<span class="s2">    colour: orange</span>
+<span class="s2">    matches: [for, def, while, from, import, as, with, self]</span>
+
+<span class="s2">  variables:</span>
+<span class="s2">    colour: red4</span>
+<span class="s2">    matches: [&#39;True&#39;, &#39;False&#39;, None]</span>
+
+<span class="s2">  conditionals:</span>
+<span class="s2">    colour: green</span>
+<span class="s2">    matches: [try, except, if, else, elif]</span>
+
+<span class="s2">  functions:</span>
+<span class="s2">    colour: blue4</span>
+<span class="s2">    matches: [int, str, dict, list, set, float]</span>
+
+<span class="s2">numbers:</span>
+<span class="s2">  colour: purple</span>
+
+<span class="s2">strings:</span>
+<span class="s2">  colour: &#39;#e1218b&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">python_language_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">yaml_file</span><span class="p">:</span>
+                <span class="n">yaml_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_file_contents</span><span class="p">)</span></div>
+
+
+    <span class="c1"># =========== Menu Functions ==============</span>
+
+<div class="viewcode-block" id="MainWindow.file_new">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.file_new">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">file_new</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+N</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_file</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">force_update</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.file_open">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.file_open">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">file_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+O</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">file_to_open</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">askopenfilename</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">file_to_open</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">open_file</span> <span class="o">=</span> <span class="n">file_to_open</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">display_file_contents</span><span class="p">(</span><span class="n">file_to_open</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span><span class="o">.</span><span class="n">force_highlight</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">force_update</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.file_save">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.file_save">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">file_save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+S</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">current_file</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">open_file</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">open_file</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">current_file</span><span class="p">:</span>
+            <span class="n">current_file</span> <span class="o">=</span> <span class="n">filedialog</span><span class="o">.</span><span class="n">asksaveasfilename</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">current_file</span><span class="p">:</span>
+            <span class="n">contents</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">tk</span><span class="o">.</span><span class="n">END</span><span class="p">)</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">current_file</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.edit_cut">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.edit_cut">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_cut</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+X</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">event_generate</span><span class="p">(</span><span class="s2">&quot;&lt;Control-x&gt;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">force_update</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.edit_paste">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.edit_paste">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_paste</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+V</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">event_generate</span><span class="p">(</span><span class="s2">&quot;&lt;Control-v&gt;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">line_numbers</span><span class="o">.</span><span class="n">force_update</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">highlighter</span><span class="o">.</span><span class="n">force_highlight</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.edit_copy">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.edit_copy">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+C</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">event_generate</span><span class="p">(</span><span class="s2">&quot;&lt;Control-c&gt;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.edit_select_all">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.edit_select_all">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_select_all</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+A</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_area</span><span class="o">.</span><span class="n">event_generate</span><span class="p">(</span><span class="s2">&quot;&lt;Control-a&gt;&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.edit_find_and_replace">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.edit_find_and_replace">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">edit_find_and_replace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+F</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_find_window</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.help_about">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.help_about">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">help_about</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+H</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">show_about_page</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.tools_change_syntax_highlighting">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.tools_change_syntax_highlighting">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tools_change_syntax_highlighting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+M</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_syntax_highlighting_file</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.tools_change_colour_scheme">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.tools_change_colour_scheme">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tools_change_colour_scheme</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+G</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">change_colour_scheme</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="MainWindow.tools_change_font">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.MainWindow.tools_change_font">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tools_change_font</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ctrl+L</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">change_font</span><span class="p">()</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../../developer/custom_step.html#custom_step.texteditor.main">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">mw</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+    <span class="n">mw</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">mw</span> <span class="o">=</span> <span class="n">MainWindow</span><span class="p">()</span>
+    <span class="n">mw</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

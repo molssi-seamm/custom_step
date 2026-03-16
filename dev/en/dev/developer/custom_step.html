@@ -1,0 +1,1389 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>custom_step package &#8212; Custom Step 2023.12.12+3.g6aa3151 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=c224919a" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQXXTJ2');</script>
+<!-- End Google Tag Manager -->
+
+    <script src="../_static/documentation_options.js?v=612f0867"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'developer/custom_step';</script>
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="2023.12.12+3.g6aa3151" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/SEAMM logo.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/SEAMM Inverted 288x181.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">CUSTOM Step</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../developer_guide/index.html">
+    Developer Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API Documentation
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../authors.html">
+    Credits
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../history.html">
+    History
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://molssi-seamm.github.io">
+    SEAMM Documentation
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://molssi.org">
+    MolSSI
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/molssi-seamm/custom_step" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/MolSSI_NSF" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../user_guide/index.html">
+    User Guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../developer_guide/index.html">
+    Developer Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
+    API Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../authors.html">
+    Credits
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../history.html">
+    History
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://molssi-seamm.github.io">
+    SEAMM Documentation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://molssi.org">
+    MolSSI
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/molssi-seamm/custom_step" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/MolSSI_NSF" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">custom_step package</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="custom-step-package">
+<h1>custom_step package<a class="headerlink" href="#custom-step-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-custom_step.colourchooser">
+<span id="custom-step-colourchooser-module"></span><h2>custom_step.colourchooser module<a class="headerlink" href="#module-custom_step.colourchooser" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.colourchooser.ColourChooser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.colourchooser.</span></span><span class="sig-name descname"><span class="pre">ColourChooser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Toplevel</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.colourchooser.ColourChooser.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser.save" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.colourchooser.ColourChooser.set_colour">
+<span class="sig-name descname"><span class="pre">set_colour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/colourchooser.html#ColourChooser.set_colour"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.colourchooser.ColourChooser.set_colour" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.custom">
+<span id="custom-step-custom-module"></span><h2>custom_step.custom module<a class="headerlink" href="#module-custom_step.custom" title="Link to this heading">#</a></h2>
+<p>Non-graphical part of the Custom step in a SEAMM flowchart</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.custom.Custom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.custom.</span></span><span class="sig-name descname"><span class="pre">Custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowchart=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title='Custom</span> <span class="pre">Python'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger=&lt;Logger</span> <span class="pre">custom_step.custom</span> <span class="pre">(WARNING)&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom.Custom" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.custom.Custom.description_text">
+<span class="sig-name descname"><span class="pre">description_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom.description_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom.Custom.description_text" title="Link to this definition">#</a></dt>
+<dd><p>Create the text description of what this step will do.
+The dictionary of control values is passed in as P so that
+the code can test values, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>P</strong> (<em>dict</em>) – An optional dictionary of the current values of the control
+parameters.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A description of the current step.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="custom_step.custom.Custom.git_revision">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">git_revision</span></span><a class="headerlink" href="#custom_step.custom.Custom.git_revision" title="Link to this definition">#</a></dt>
+<dd><p>The git version of this module.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.custom.Custom.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#Custom.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom.Custom.run" title="Link to this definition">#</a></dt>
+<dd><p>Run a Custom step.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="custom_step.custom.Custom.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#custom_step.custom.Custom.version" title="Link to this definition">#</a></dt>
+<dd><p>The semantic version of this module.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.custom.cd">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.custom.</span></span><span class="sig-name descname"><span class="pre">cd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newPath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom.html#cd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom.cd" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Context manager for changing the current working directory</p>
+</dd></dl>
+
+</section>
+<section id="module-custom_step.custom_parameters">
+<span id="custom-step-custom-parameters-module"></span><h2>custom_step.custom_parameters module<a class="headerlink" href="#module-custom_step.custom_parameters" title="Link to this heading">#</a></h2>
+<p>Control parameters for the Custom step in a SEAMM flowchart</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.custom_parameters.CustomParameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.custom_parameters.</span></span><span class="sig-name descname"><span class="pre">CustomParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_parameters.html#CustomParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom_parameters.CustomParameters" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Parameters</span></code></p>
+<p>The control parameters for a Custom step.</p>
+<p>The developer will add a dictionary of Parameters to this class.
+The keys are parameters for the current plugin, which themselves
+might be dictionaries.</p>
+<p>You need to replace the ‘time’ example below with one or more
+definitions of the control parameters for your plugin and application.</p>
+<dl class="simple">
+<dt>parameters<span class="classifier">{&lt;see items below&gt;}</span></dt><dd><p>A dictionary containing the parameters for the current step.
+Each key of the dictionary is a dictionary that contains the
+the following keys: kind, default, default_units, enumeration,
+format_string, description and help text.</p>
+</dd>
+<dt>‘kind’<span class="classifier">custom</span></dt><dd><p>Specifies the kind of a variable. While the ‘kind’ of a variable might
+be a numeric value, it may still have enumerated custom values
+meaningful to the user. For instance, if the parameter is
+a convergence criterion for an optimizer, custom values like ‘normal’,
+‘precise’, etc, might be adequate. In addition, any
+parameter can be set to a variable of expression, indicated by having
+‘$’ as the first character in the field. For example, $OPTIMIZER_CONV.</p>
+</dd>
+<dt>‘default’<span class="classifier">‘integer’ or ‘float’ or ‘string’ or ‘boolean’ or ‘enum’</span></dt><dd><p>The default value of the parameter, used to reset it.</p>
+</dd>
+<dt>‘default_units’<span class="classifier">str</span></dt><dd><p>The default units, used for resetting the value.</p>
+</dd>
+<dt>‘enumeration’<span class="classifier">tuple</span></dt><dd><p>A tuple of enumerated values.</p>
+</dd>
+<dt>‘format_string’<span class="classifier">str</span></dt><dd><p>A format string for ‘pretty’ output.</p>
+</dd>
+<dt>‘description’<span class="classifier">str</span></dt><dd><p>A short string used as a prompt in the GUI.</p>
+</dd>
+<dt>‘help_text’<span class="classifier">tuple</span></dt><dd><p>A longer string to display as help for the user.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Custom</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">TkCustom</span></code>, <a class="reference internal" href="#custom_step.custom_parameters.CustomParameters" title="custom_step.custom_parameters.CustomParameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomParameters</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomStep</span></code></p>
+</div>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s2">&quot;kind&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;default_units&quot;</span><span class="p">:</span> <span class="s2">&quot;ps&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enumeration&quot;</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">(),</span>
+        <span class="s2">&quot;format_string&quot;</span><span class="p">:</span> <span class="s2">&quot;.1f&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Simulation time:&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;help_text&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;The time to simulate in the dynamics run.&quot;</span><span class="p">)</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.custom_parameters.CustomParameters.parameters">
+<span class="sig-name descname"><span class="pre">parameters</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'script':</span> <span class="pre">{'default':</span> <span class="pre">'',</span> <span class="pre">'default_units':</span> <span class="pre">None,</span> <span class="pre">'description':</span> <span class="pre">'Script:',</span> <span class="pre">'enumeration':</span> <span class="pre">(),</span> <span class="pre">'format_string':</span> <span class="pre">'',</span> <span class="pre">'help_text':</span> <span class="pre">'The</span> <span class="pre">Python</span> <span class="pre">script',</span> <span class="pre">'kind':</span> <span class="pre">'string'}}</span></em><a class="headerlink" href="#custom_step.custom_parameters.CustomParameters.parameters" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.custom_step">
+<span id="custom-step-custom-step-module"></span><h2>custom_step.custom_step module<a class="headerlink" href="#module-custom_step.custom_step" title="Link to this heading">#</a></h2>
+<p>Helper class needed for the stevedore integration. Needs to provide
+a description() method that returns a dict containing a description of
+this node, and a factory() method for creating the graphical and non-graphical
+nodes.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.custom_step.CustomStep">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.custom_step.</span></span><span class="sig-name descname"><span class="pre">CustomStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowchart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.custom_step.CustomStep.create_node">
+<span class="sig-name descname"><span class="pre">create_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flowchart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.create_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.create_node" title="Link to this definition">#</a></dt>
+<dd><p>Return the new node object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.custom_step.CustomStep.create_tk_node">
+<span class="sig-name descname"><span class="pre">create_tk_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">canvas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.create_tk_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.create_tk_node" title="Link to this definition">#</a></dt>
+<dd><p>Return the graphical Tk node object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.custom_step.CustomStep.description">
+<span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/custom_step.html#CustomStep.description"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.custom_step.CustomStep.description" title="Link to this definition">#</a></dt>
+<dd><p>Return a description of what this extension does</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.custom_step.CustomStep.my_description">
+<span class="sig-name descname"><span class="pre">my_description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'description':</span> <span class="pre">'An</span> <span class="pre">interface</span> <span class="pre">for</span> <span class="pre">Custom</span> <span class="pre">Python</span> <span class="pre">steps',</span> <span class="pre">'group':</span> <span class="pre">'Custom',</span> <span class="pre">'name':</span> <span class="pre">'Python'}</span></em><a class="headerlink" href="#custom_step.custom_step.CustomStep.my_description" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.findwindow">
+<span id="custom-step-findwindow-module"></span><h2>custom_step.findwindow module<a class="headerlink" href="#module-custom_step.findwindow" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.findwindow.FindWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.findwindow.</span></span><span class="sig-name descname"><span class="pre">FindWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Toplevel</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.findwindow.FindWindow.on_cancel">
+<span class="sig-name descname"><span class="pre">on_cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_cancel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_cancel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.findwindow.FindWindow.on_find">
+<span class="sig-name descname"><span class="pre">on_find</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_find"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_find" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.findwindow.FindWindow.on_replace">
+<span class="sig-name descname"><span class="pre">on_replace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/findwindow.html#FindWindow.on_replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.findwindow.FindWindow.on_replace" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.fontchooser">
+<span id="custom-step-fontchooser-module"></span><h2>custom_step.fontchooser module<a class="headerlink" href="#module-custom_step.fontchooser" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.fontchooser.FontChooser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.fontchooser.</span></span><span class="sig-name descname"><span class="pre">FontChooser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/fontchooser.html#FontChooser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.fontchooser.FontChooser" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Toplevel</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.fontchooser.FontChooser.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/fontchooser.html#FontChooser.save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.fontchooser.FontChooser.save" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.highlighter">
+<span id="custom-step-highlighter-module"></span><h2>custom_step.highlighter module<a class="headerlink" href="#module-custom_step.highlighter" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.highlighter.</span></span><span class="sig-name descname"><span class="pre">Highlighter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_widget</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">syntax_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.clear_highlight">
+<span class="sig-name descname"><span class="pre">clear_highlight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.clear_highlight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.clear_highlight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.configure_tags">
+<span class="sig-name descname"><span class="pre">configure_tags</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.configure_tags"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.configure_tags" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.force_highlight">
+<span class="sig-name descname"><span class="pre">force_highlight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.force_highlight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.force_highlight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.highlight">
+<span class="sig-name descname"><span class="pre">highlight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.highlight"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.highlight" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.highlight_regex">
+<span class="sig-name descname"><span class="pre">highlight_regex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.highlight_regex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.highlight_regex" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.on_key_release">
+<span class="sig-name descname"><span class="pre">on_key_release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.on_key_release"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.on_key_release" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.highlighter.Highlighter.parse_syntax_file">
+<span class="sig-name descname"><span class="pre">parse_syntax_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/highlighter.html#Highlighter.parse_syntax_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.highlighter.Highlighter.parse_syntax_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.linenumbers">
+<span id="custom-step-linenumbers-module"></span><h2>custom_step.linenumbers module<a class="headerlink" href="#module-custom_step.linenumbers" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.linenumbers.LineNumbers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.linenumbers.</span></span><span class="sig-name descname"><span class="pre">LineNumbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_widget</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.linenumbers.LineNumbers.force_update">
+<span class="sig-name descname"><span class="pre">force_update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers.force_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers.force_update" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.linenumbers.LineNumbers.on_key_press">
+<span class="sig-name descname"><span class="pre">on_key_press</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/linenumbers.html#LineNumbers.on_key_press"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.linenumbers.LineNumbers.on_key_press" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.textarea">
+<span id="custom-step-textarea-module"></span><h2>custom_step.textarea module<a class="headerlink" href="#module-custom_step.textarea" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.textarea.</span></span><span class="sig-name descname"><span class="pre">TextArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Text</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.bind_events">
+<span class="sig-name descname"><span class="pre">bind_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.bind_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.bind_events" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.cancel_find">
+<span class="sig-name descname"><span class="pre">cancel_find</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.cancel_find"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.cancel_find" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.copy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.cut">
+<span class="sig-name descname"><span class="pre">cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.cut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.cut" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.display_file_contents">
+<span class="sig-name descname"><span class="pre">display_file_contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.display_file_contents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.display_file_contents" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.find">
+<span class="sig-name descname"><span class="pre">find</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_to_find</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.find"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.find" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.paste">
+<span class="sig-name descname"><span class="pre">paste</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.paste"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.paste" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.redo">
+<span class="sig-name descname"><span class="pre">redo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.redo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.redo" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.replace_text">
+<span class="sig-name descname"><span class="pre">replace_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">replacement</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.replace_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.replace_text" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.select_all">
+<span class="sig-name descname"><span class="pre">select_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.select_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.select_all" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.textarea.TextArea.undo">
+<span class="sig-name descname"><span class="pre">undo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/textarea.html#TextArea.undo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.textarea.TextArea.undo" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step.texteditor">
+<span id="custom-step-texteditor-module"></span><h2>custom_step.texteditor module<a class="headerlink" href="#module-custom_step.texteditor" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.texteditor.</span></span><span class="sig-name descname"><span class="pre">MainWindow</span></span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Tk</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.apply_colour_scheme">
+<span class="sig-name descname"><span class="pre">apply_colour_scheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">foreground</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_foreground</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text_background</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.apply_colour_scheme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.apply_colour_scheme" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.bind_events">
+<span class="sig-name descname"><span class="pre">bind_events</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.bind_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.bind_events" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.change_colour_scheme">
+<span class="sig-name descname"><span class="pre">change_colour_scheme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.change_colour_scheme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.change_colour_scheme" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.change_font">
+<span class="sig-name descname"><span class="pre">change_font</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.change_font"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.change_font" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.configure_ttk_elements">
+<span class="sig-name descname"><span class="pre">configure_ttk_elements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.configure_ttk_elements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.configure_ttk_elements" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.create_config_directory_if_needed">
+<span class="sig-name descname"><span class="pre">create_config_directory_if_needed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.create_config_directory_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.create_config_directory_if_needed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.create_default_scheme_if_needed">
+<span class="sig-name descname"><span class="pre">create_default_scheme_if_needed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.create_default_scheme_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.create_default_scheme_if_needed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.create_font_scheme_if_needed">
+<span class="sig-name descname"><span class="pre">create_font_scheme_if_needed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.create_font_scheme_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.create_font_scheme_if_needed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.create_python_language_if_needed">
+<span class="sig-name descname"><span class="pre">create_python_language_if_needed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.create_python_language_if_needed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.create_python_language_if_needed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.edit_copy">
+<span class="sig-name descname"><span class="pre">edit_copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.edit_copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.edit_copy" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+C</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.edit_cut">
+<span class="sig-name descname"><span class="pre">edit_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.edit_cut"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.edit_cut" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+X</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.edit_find_and_replace">
+<span class="sig-name descname"><span class="pre">edit_find_and_replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.edit_find_and_replace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.edit_find_and_replace" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+F</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.edit_paste">
+<span class="sig-name descname"><span class="pre">edit_paste</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.edit_paste"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.edit_paste" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+V</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.edit_select_all">
+<span class="sig-name descname"><span class="pre">edit_select_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.edit_select_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.edit_select_all" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+A</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.file_new">
+<span class="sig-name descname"><span class="pre">file_new</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.file_new"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.file_new" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+N</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.file_open">
+<span class="sig-name descname"><span class="pre">file_open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.file_open"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.file_open" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+O</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.file_save">
+<span class="sig-name descname"><span class="pre">file_save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.file_save"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.file_save" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+S</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.generate_sub_menus">
+<span class="sig-name descname"><span class="pre">generate_sub_menus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sub_menu_items</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.generate_sub_menus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.generate_sub_menus" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.help_about">
+<span class="sig-name descname"><span class="pre">help_about</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.help_about"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.help_about" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+H</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.load_font_file">
+<span class="sig-name descname"><span class="pre">load_font_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.load_font_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.load_font_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.load_scheme_file">
+<span class="sig-name descname"><span class="pre">load_scheme_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scheme</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.load_scheme_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.load_scheme_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.load_syntax_highlighting_file">
+<span class="sig-name descname"><span class="pre">load_syntax_highlighting_file</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.load_syntax_highlighting_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.load_syntax_highlighting_file" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.scroll_text">
+<span class="sig-name descname"><span class="pre">scroll_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.scroll_text"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.scroll_text" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.show_about_page">
+<span class="sig-name descname"><span class="pre">show_about_page</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.show_about_page"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.show_about_page" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.show_find_window">
+<span class="sig-name descname"><span class="pre">show_find_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.show_find_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.show_find_window" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.show_right_click_menu">
+<span class="sig-name descname"><span class="pre">show_right_click_menu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.show_right_click_menu"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.show_right_click_menu" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.tools_change_colour_scheme">
+<span class="sig-name descname"><span class="pre">tools_change_colour_scheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.tools_change_colour_scheme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.tools_change_colour_scheme" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+G</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.tools_change_font">
+<span class="sig-name descname"><span class="pre">tools_change_font</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.tools_change_font"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.tools_change_font" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+L</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.tools_change_syntax_highlighting">
+<span class="sig-name descname"><span class="pre">tools_change_syntax_highlighting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.tools_change_syntax_highlighting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.tools_change_syntax_highlighting" title="Link to this definition">#</a></dt>
+<dd><p>Ctrl+M</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.texteditor.MainWindow.update_font">
+<span class="sig-name descname"><span class="pre">update_font</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#MainWindow.update_font"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.MainWindow.update_font" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="custom_step.texteditor.main">
+<span class="sig-prename descclassname"><span class="pre">custom_step.texteditor.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/texteditor.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.texteditor.main" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-custom_step.tk_custom">
+<span id="custom-step-tk-custom-module"></span><h2>custom_step.tk_custom module<a class="headerlink" href="#module-custom_step.tk_custom" title="Link to this heading">#</a></h2>
+<p>The graphical part of a Custom step</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">custom_step.tk_custom.</span></span><span class="sig-name descname"><span class="pre">TkCustom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tk_flowchart</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">canvas</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">120</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TkNode</span></code></p>
+<p>The graphical part of a Custom step in a flowchart.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.tk_flowchart">
+<span class="sig-name descname"><span class="pre">tk_flowchart</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.tk_flowchart" title="Link to this definition">#</a></dt>
+<dd><p>The flowchart that we belong to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>TkFlowchart = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.node" title="Link to this definition">#</a></dt>
+<dd><p>The corresponding node of the non-graphical flowchart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Node = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.namespace" title="Link to this definition">#</a></dt>
+<dd><p>The namespace of the current step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.sub_tk_flowchart">
+<span class="sig-name descname"><span class="pre">sub_tk_flowchart</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.sub_tk_flowchart" title="Link to this definition">#</a></dt>
+<dd><p>A graphical Flowchart representing a subflowchart</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>TkFlowchart</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.canvas">
+<span class="sig-name descname"><span class="pre">canvas</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.canvas" title="Link to this definition">#</a></dt>
+<dd><p>The Tk Canvas to draw on</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tkCanvas = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.dialog">
+<span class="sig-name descname"><span class="pre">dialog</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.dialog" title="Link to this definition">#</a></dt>
+<dd><p>The Pmw dialog object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dialog</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.x">
+<span class="sig-name descname"><span class="pre">x</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.x" title="Link to this definition">#</a></dt>
+<dd><p>The x-coordinate of the center of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.y">
+<span class="sig-name descname"><span class="pre">y</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.y" title="Link to this definition">#</a></dt>
+<dd><p>The y-coordinate of the center of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int = None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.w">
+<span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.w" title="Link to this definition">#</a></dt>
+<dd><p>The width in pixels of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int = 200</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.h">
+<span class="sig-name descname"><span class="pre">h</span></span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.h" title="Link to this definition">#</a></dt>
+<dd><p>The height in pixels of the picture of the node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int = 50</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.self">
+<span class="sig-name descname"><span class="pre">self</span></span><span class="sig-paren">[</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span></em><span class="sig-paren">]</span><a class="headerlink" href="#custom_step.tk_custom.TkCustom.self" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of tk widgets built using the information
+contained in Set Cell_parameters.py</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Custom</span></code>, <a class="reference internal" href="#custom_step.tk_custom.TkCustom" title="custom_step.tk_custom.TkCustom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TkCustom</span></code></a>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">CustomParameters</span></code></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.create_dialog">
+<span class="sig-name descname"><span class="pre">create_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.create_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.create_dialog" title="Link to this definition">#</a></dt>
+<dd><p>Create the dialog!</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.handle_dialog">
+<span class="sig-name descname"><span class="pre">handle_dialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.handle_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.handle_dialog" title="Link to this definition">#</a></dt>
+<dd><p>Do the right thing when the dialog is closed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="custom_step.tk_custom.TkCustom.right_click">
+<span class="sig-name descname"><span class="pre">right_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/custom_step/tk_custom.html#TkCustom.right_click"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#custom_step.tk_custom.TkCustom.right_click" title="Link to this definition">#</a></dt>
+<dd><p>Probably need to add our dialog…</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-custom_step">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-custom_step" title="Link to this heading">#</a></h2>
+<p>custom_step
+A step in a SEAMM flowchart for custom Python</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.colourchooser">custom_step.colourchooser module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.colourchooser.ColourChooser"><code class="docutils literal notranslate"><span class="pre">ColourChooser</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.colourchooser.ColourChooser.save"><code class="docutils literal notranslate"><span class="pre">ColourChooser.save()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.colourchooser.ColourChooser.set_colour"><code class="docutils literal notranslate"><span class="pre">ColourChooser.set_colour()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.custom">custom_step.custom module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.Custom"><code class="docutils literal notranslate"><span class="pre">Custom</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.Custom.description_text"><code class="docutils literal notranslate"><span class="pre">Custom.description_text()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.Custom.git_revision"><code class="docutils literal notranslate"><span class="pre">Custom.git_revision</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.Custom.run"><code class="docutils literal notranslate"><span class="pre">Custom.run()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.Custom.version"><code class="docutils literal notranslate"><span class="pre">Custom.version</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom.cd"><code class="docutils literal notranslate"><span class="pre">cd</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.custom_parameters">custom_step.custom_parameters module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_parameters.CustomParameters"><code class="docutils literal notranslate"><span class="pre">CustomParameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_parameters.CustomParameters.parameters"><code class="docutils literal notranslate"><span class="pre">CustomParameters.parameters</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.custom_step">custom_step.custom_step module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_step.CustomStep"><code class="docutils literal notranslate"><span class="pre">CustomStep</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_step.CustomStep.create_node"><code class="docutils literal notranslate"><span class="pre">CustomStep.create_node()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_step.CustomStep.create_tk_node"><code class="docutils literal notranslate"><span class="pre">CustomStep.create_tk_node()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_step.CustomStep.description"><code class="docutils literal notranslate"><span class="pre">CustomStep.description()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.custom_step.CustomStep.my_description"><code class="docutils literal notranslate"><span class="pre">CustomStep.my_description</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.findwindow">custom_step.findwindow module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.findwindow.FindWindow"><code class="docutils literal notranslate"><span class="pre">FindWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.findwindow.FindWindow.on_cancel"><code class="docutils literal notranslate"><span class="pre">FindWindow.on_cancel()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.findwindow.FindWindow.on_find"><code class="docutils literal notranslate"><span class="pre">FindWindow.on_find()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.findwindow.FindWindow.on_replace"><code class="docutils literal notranslate"><span class="pre">FindWindow.on_replace()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.fontchooser">custom_step.fontchooser module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.fontchooser.FontChooser"><code class="docutils literal notranslate"><span class="pre">FontChooser</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.fontchooser.FontChooser.save"><code class="docutils literal notranslate"><span class="pre">FontChooser.save()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.highlighter">custom_step.highlighter module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter"><code class="docutils literal notranslate"><span class="pre">Highlighter</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.clear_highlight"><code class="docutils literal notranslate"><span class="pre">Highlighter.clear_highlight()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.configure_tags"><code class="docutils literal notranslate"><span class="pre">Highlighter.configure_tags()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.force_highlight"><code class="docutils literal notranslate"><span class="pre">Highlighter.force_highlight()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.highlight"><code class="docutils literal notranslate"><span class="pre">Highlighter.highlight()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.highlight_regex"><code class="docutils literal notranslate"><span class="pre">Highlighter.highlight_regex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.on_key_release"><code class="docutils literal notranslate"><span class="pre">Highlighter.on_key_release()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.highlighter.Highlighter.parse_syntax_file"><code class="docutils literal notranslate"><span class="pre">Highlighter.parse_syntax_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.linenumbers">custom_step.linenumbers module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.linenumbers.LineNumbers"><code class="docutils literal notranslate"><span class="pre">LineNumbers</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.linenumbers.LineNumbers.force_update"><code class="docutils literal notranslate"><span class="pre">LineNumbers.force_update()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.linenumbers.LineNumbers.on_key_press"><code class="docutils literal notranslate"><span class="pre">LineNumbers.on_key_press()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.textarea">custom_step.textarea module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea"><code class="docutils literal notranslate"><span class="pre">TextArea</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.bind_events"><code class="docutils literal notranslate"><span class="pre">TextArea.bind_events()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.cancel_find"><code class="docutils literal notranslate"><span class="pre">TextArea.cancel_find()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.copy"><code class="docutils literal notranslate"><span class="pre">TextArea.copy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.cut"><code class="docutils literal notranslate"><span class="pre">TextArea.cut()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.display_file_contents"><code class="docutils literal notranslate"><span class="pre">TextArea.display_file_contents()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.find"><code class="docutils literal notranslate"><span class="pre">TextArea.find()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.paste"><code class="docutils literal notranslate"><span class="pre">TextArea.paste()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.redo"><code class="docutils literal notranslate"><span class="pre">TextArea.redo()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.replace_text"><code class="docutils literal notranslate"><span class="pre">TextArea.replace_text()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.select_all"><code class="docutils literal notranslate"><span class="pre">TextArea.select_all()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.textarea.TextArea.undo"><code class="docutils literal notranslate"><span class="pre">TextArea.undo()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.texteditor">custom_step.texteditor module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow"><code class="docutils literal notranslate"><span class="pre">MainWindow</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.apply_colour_scheme"><code class="docutils literal notranslate"><span class="pre">MainWindow.apply_colour_scheme()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.bind_events"><code class="docutils literal notranslate"><span class="pre">MainWindow.bind_events()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.change_colour_scheme"><code class="docutils literal notranslate"><span class="pre">MainWindow.change_colour_scheme()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.change_font"><code class="docutils literal notranslate"><span class="pre">MainWindow.change_font()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.configure_ttk_elements"><code class="docutils literal notranslate"><span class="pre">MainWindow.configure_ttk_elements()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.create_config_directory_if_needed"><code class="docutils literal notranslate"><span class="pre">MainWindow.create_config_directory_if_needed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.create_default_scheme_if_needed"><code class="docutils literal notranslate"><span class="pre">MainWindow.create_default_scheme_if_needed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.create_font_scheme_if_needed"><code class="docutils literal notranslate"><span class="pre">MainWindow.create_font_scheme_if_needed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.create_python_language_if_needed"><code class="docutils literal notranslate"><span class="pre">MainWindow.create_python_language_if_needed()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.edit_copy"><code class="docutils literal notranslate"><span class="pre">MainWindow.edit_copy()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.edit_cut"><code class="docutils literal notranslate"><span class="pre">MainWindow.edit_cut()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.edit_find_and_replace"><code class="docutils literal notranslate"><span class="pre">MainWindow.edit_find_and_replace()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.edit_paste"><code class="docutils literal notranslate"><span class="pre">MainWindow.edit_paste()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.edit_select_all"><code class="docutils literal notranslate"><span class="pre">MainWindow.edit_select_all()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.file_new"><code class="docutils literal notranslate"><span class="pre">MainWindow.file_new()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.file_open"><code class="docutils literal notranslate"><span class="pre">MainWindow.file_open()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.file_save"><code class="docutils literal notranslate"><span class="pre">MainWindow.file_save()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.generate_sub_menus"><code class="docutils literal notranslate"><span class="pre">MainWindow.generate_sub_menus()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.help_about"><code class="docutils literal notranslate"><span class="pre">MainWindow.help_about()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.load_font_file"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_font_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.load_scheme_file"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_scheme_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.load_syntax_highlighting_file"><code class="docutils literal notranslate"><span class="pre">MainWindow.load_syntax_highlighting_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.scroll_text"><code class="docutils literal notranslate"><span class="pre">MainWindow.scroll_text()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.show_about_page"><code class="docutils literal notranslate"><span class="pre">MainWindow.show_about_page()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.show_find_window"><code class="docutils literal notranslate"><span class="pre">MainWindow.show_find_window()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.show_right_click_menu"><code class="docutils literal notranslate"><span class="pre">MainWindow.show_right_click_menu()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.tools_change_colour_scheme"><code class="docutils literal notranslate"><span class="pre">MainWindow.tools_change_colour_scheme()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.tools_change_font"><code class="docutils literal notranslate"><span class="pre">MainWindow.tools_change_font()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.tools_change_syntax_highlighting"><code class="docutils literal notranslate"><span class="pre">MainWindow.tools_change_syntax_highlighting()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.MainWindow.update_font"><code class="docutils literal notranslate"><span class="pre">MainWindow.update_font()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.texteditor.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step.tk_custom">custom_step.tk_custom module</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom"><code class="docutils literal notranslate"><span class="pre">TkCustom</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.tk_flowchart"><code class="docutils literal notranslate"><span class="pre">TkCustom.tk_flowchart</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.node"><code class="docutils literal notranslate"><span class="pre">TkCustom.node</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.namespace"><code class="docutils literal notranslate"><span class="pre">TkCustom.namespace</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.sub_tk_flowchart"><code class="docutils literal notranslate"><span class="pre">TkCustom.sub_tk_flowchart</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.canvas"><code class="docutils literal notranslate"><span class="pre">TkCustom.canvas</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.dialog"><code class="docutils literal notranslate"><span class="pre">TkCustom.dialog</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.x"><code class="docutils literal notranslate"><span class="pre">TkCustom.x</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.y"><code class="docutils literal notranslate"><span class="pre">TkCustom.y</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.w"><code class="docutils literal notranslate"><span class="pre">TkCustom.w</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.h"><code class="docutils literal notranslate"><span class="pre">TkCustom.h</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.self"><code class="docutils literal notranslate"><span class="pre">TkCustom.self</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.create_dialog"><code class="docutils literal notranslate"><span class="pre">TkCustom.create_dialog()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.handle_dialog"><code class="docutils literal notranslate"><span class="pre">TkCustom.handle_dialog()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#custom_step.tk_custom.TkCustom.right_click"><code class="docutils literal notranslate"><span class="pre">TkCustom.right_click()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-custom_step">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/developer/custom_step.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
