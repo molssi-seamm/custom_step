@@ -1,6 +1,10 @@
 =======
 History
 =======
+2026.3.15 -- Improved error handling
+   * Printing a traceback for errors in Python to both job.ou and to stderr.txt in the
+     working directory.
+
 2023.12.3 -- Removed pinning for dependencies
    * Removed pinning for dependencies to allow for more flexibility in
      the versions of the dependencies that can be used.

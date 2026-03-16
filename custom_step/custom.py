@@ -4,6 +4,7 @@
 
 import logging
 import os
+import traceback
 
 import custom_step
 import seamm
@@ -136,6 +137,9 @@ class Custom(seamm.Node):
                 exec(script, seamm.flowchart_variables._data)
         except Exception as e:
             printer.normal(f"\n    ***{e.__class__.__name__}*** {str(e)}")
+            printer.normal(traceback.format_exc())
+            with open(self.wd / "stderr.out", "a") as fd:
+                traceback.print_exc(file=fd)
             raise
         else:
             printer.normal("    --- end of script ---")
