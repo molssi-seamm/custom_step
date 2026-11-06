@@ -1,6 +1,13 @@
 =======
 History
 =======
+2026.11.6 -- The script is run as written
+    * SEAMM 2026.11.6 replaces ``${...}`` in text parameters by flowchart variables.
+      The Python script is run exactly as written instead, so ``${`` in it is left
+      alone. Requires seamm 2026.11.6 or later.
+    * Internal: the tests run with the dependencies from PyPI instead of a conda
+      environment, and the source distribution now builds.
+
 2026.3.15 -- Improved error handling
    * Printing a traceback for errors in Python to both job.ou and to stderr.txt in the
      working directory.
